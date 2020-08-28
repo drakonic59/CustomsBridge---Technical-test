@@ -1,14 +1,16 @@
 <template>
   <div id="show" class="row">
     <div class="col-2" v-if="isRequestOk" v-for="item in jsonContent" v-bind:key="item">
-      <ListObject country="item.issuing_country" ref="item.bti_ref" end="item.end_date"
-                  desc="item.description_fr" />
+      <ListObject v-bind:country="item.issuing_country" 
+                  v-bind:reference="item.bti_ref" 
+                  v-bind:end="item.end_date" 
+                  v-bind:desc="item.description_fr" />
     </div>
   </div>
 </template>
 
 <script>
-import ListObject from './components/ListObject'
+import ListObject from './ListObject'
 
 export default {
   name: 'ListShower',
@@ -23,10 +25,10 @@ export default {
     }
   },
   async created () {
-    let response = await fetch("https://api.customsbridge.ai/ebti?name=" + 
+    let response = await fetch("https://api.customsbridge.ai/ebti?filter_on_code=" + 
                                             this.filter + "&search=" +
-                                            this.search + "&limit=" 
-                                            + this.limit);
+                                            this.search + "&limit=" +
+                                            this.limit);
     if (response.ok) {
       this.jsonContent = await response.json();
       this.isRequestOk = true;
