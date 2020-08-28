@@ -5,7 +5,7 @@
       <p class="col-1 mt-1 mr-5 p-0" >{{ formatRef }}</p>
       <p class="col-3 mt-1 m-0 p-0" >{{ formatEndDate }} </p>
     </div>
-     <p> {{ formatDesc }} </p>
+      <p class="pr-3 pl-3 pb-2 text-justify"> {{ formatDesc }} </p>
   </div>
 </template>
 
@@ -13,7 +13,7 @@
 export default {
   name: 'ListObject',
   props: [ 'country', 'reference', 'end', 'desc' ],
-  data () {
+  data () {3 
     return {
     }
   },
@@ -40,4 +40,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+p {
+  font-size: 0.8em;
+}
+
 </style>
