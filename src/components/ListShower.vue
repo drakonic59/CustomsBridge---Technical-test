@@ -8,9 +8,14 @@
 </template>
 
 <script>
+import ListObject from './components/ListObject'
+
 export default {
   name: 'ListShower',
   props: [ 'filter', 'search', 'limit' ],
+  components: {
+    ListObject
+  },
   data () {
     return {
       jsonContent: '',
