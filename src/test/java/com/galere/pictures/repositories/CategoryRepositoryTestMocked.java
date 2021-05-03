@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.galere.pictures.entities.Category;
+import com.galere.pictures.entities.mocked.Category;
 import com.galere.pictures.services.impl.mocked.CategoryServiceMocked;
 
 @SpringBootTest
