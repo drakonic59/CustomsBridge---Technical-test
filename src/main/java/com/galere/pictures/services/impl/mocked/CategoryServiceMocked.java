@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.galere.pictures.entities.Category;
+import com.galere.pictures.entities.mocked.Category;
 import com.galere.pictures.services.ICategoryService;
 
 /**
